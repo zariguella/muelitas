@@ -6,6 +6,8 @@ public class Paciente {
 	String cedula;
 	String telefono;
 	String direccion;
+	String celular;
+	
 	public int getId() {
 		return id;
 	}
@@ -36,6 +38,13 @@ public class Paciente {
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
+	public String getCelular() {
+		return celular;
+	}
+	public void setCelular(String celular) {
+		this.celular = celular;
+	}
+	
 	
 	
 }
