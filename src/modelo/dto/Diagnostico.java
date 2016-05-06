@@ -2,5 +2,24 @@ package modelo.dto;
 public class Diagnostico {
 	int id;
 	String Nombre;
-	String Codigo; 
+	String Codigo;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getNombre() {
+		return Nombre;
+	}
+	public void setNombre(String nombre) {
+		Nombre = nombre;
+	}
+	public String getCodigo() {
+		return Codigo;
+	}
+	public void setCodigo(String codigo) {
+		Codigo = codigo;
+	} 
+	
 }
