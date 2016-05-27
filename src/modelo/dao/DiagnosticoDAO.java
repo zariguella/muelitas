@@ -36,21 +36,27 @@ public class DiagnosticoDAO {
 		}		
 	}
 	
-	public ArrayList<DiagnosticoDTO> listarDiagnostico(DiagnosticoDTO diagnostico){
-		try {
-			ConexionPostgres conexion=ConexionPostgres.obtenerInstancia();
-			conexion.conectar();
-			String consulta="select * from diagnostico";			
-			ResultSet resultado=conexion.consultaSQL(consulta);			
-				while(resultado.next()){
-					
-				}			
-			conexion.desconectar();		
+	public ArrayList<DiagnosticoDTO> listarDiagnostico(){
+		ConexionPostgres conexion=ConexionPostgres.obtenerInstancia();
+		conexion.conectar();
+		String consulta="select * from diagnostico";			
+		ResultSet resultado=conexion.consultaSQL(consulta);
+		ArrayList<DiagnosticoDTO> diagnosticosLista=new ArrayList<DiagnosticoDTO>();
+		try {		
+			while(resultado.next()){
+				DiagnosticoDTO diagnostico=new DiagnosticoDTO();
+				diagnostico.setId(resultado.getInt("id"));
+				diagnostico.setNombre(resultado.getString("nombre"));
+				diagnostico.setCodigo(resultado.getString("codigo"));
+				diagnosticosLista.add(diagnostico);
+			}			
+			conexion.desconectar();
+			return diagnosticosLista;
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			e.printStackTrace();	
+			conexion.desconectar();
+			return null;
 		}
-		return null;
 	}
 
 }
