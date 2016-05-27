@@ -9,6 +9,7 @@ public class ConexionPostgres {
 	String usuario="";
 	String clave="";	
 	Connection conexion;
+	static ConexionPostgres instancia=null;
 	
 	public boolean conectar(){
 		
@@ -37,10 +38,20 @@ public class ConexionPostgres {
 	public ResultSet consultaSQL(String consulta){		
 		try{
 			Statement stmt = conexion.createStatement();
-			return stmt.executeQuery(consulta);	
+			ResultSet r=stmt.executeQuery(consulta);
+			stmt.close();
+			return r;
 		}catch ( Exception e ){
 			System.out.println(e.getMessage());
 			return null;
 		}
 	}
+	
+	public static ConexionPostgres obtenerInstancia(){
+		if(instancia==null){
+			instancia=new ConexionPostgres();
+		}
+		return instancia;		
+	}
+	
 }
