@@ -2,13 +2,13 @@ package modelo.dto;
 
 import java.util.Date;
 
-public class Folio {
+public class FolioDTO {
 	
 	int id;	
 	PacienteDTO paciente;
 	Date fecha;
 	String motivoConsulta;
-	Medico medico;
+	MedicoDTO medico;
 	public int getId() {
 		return id;
 	}
@@ -33,10 +33,10 @@ public class Folio {
 	public void setMotivoConsulta(String motivoConsulta) {
 		this.motivoConsulta = motivoConsulta;
 	}
-	public Medico getMedico() {
+	public MedicoDTO getMedico() {
 		return medico;
 	}
-	public void setMedico(Medico medico) {
+	public void setMedico(MedicoDTO medico) {
 		this.medico = medico;
 	}
 	

@@ -4,7 +4,7 @@ public class ProcedimientoDTO {
 int Id;
 String Nombre; 
 String Codigo; 
-Diagnostico diagnostico;
+DiagnosticoDTO diagnostico;
 public int getId() {
 	return Id;
 }
@@ -23,10 +23,10 @@ public String getCodigo() {
 public void setCodigo(String codigo) {
 	Codigo = codigo;
 }
-public Diagnostico getDiagnostico() {
+public DiagnosticoDTO getDiagnostico() {
 	return diagnostico;
 }
-public void setDiagnostico(Diagnostico diagnostico) {
+public void setDiagnostico(DiagnosticoDTO diagnostico) {
 	this.diagnostico = diagnostico;
 } 
 

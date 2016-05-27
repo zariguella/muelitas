@@ -1,5 +1,13 @@
 package modelo.dao;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import modelo.dto.DiagnosticoDTO;
+
+import util.ConexionPostgres;
+
 public class DiagnosticoDAO {
 	
 	public boolean crearDiagnostico(DiagnosticoDTO diagnostico){
@@ -42,6 +50,7 @@ public class DiagnosticoDAO {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return null;
 	}
 
 }

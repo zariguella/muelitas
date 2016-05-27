@@ -1,5 +1,5 @@
 package modelo.dto;
-public class Diagnostico {
+public class DiagnosticoDTO {
 	int id;
 	String Nombre;
 	String Codigo;
