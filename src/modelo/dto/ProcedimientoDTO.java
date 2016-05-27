@@ -1,6 +1,6 @@
 package modelo.dto;
 
-public class Procedimientos {
+public class ProcedimientoDTO {
 int Id;
 String Nombre; 
 String Codigo; 

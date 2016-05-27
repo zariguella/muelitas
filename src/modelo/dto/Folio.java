@@ -5,7 +5,7 @@ import java.util.Date;
 public class Folio {
 	
 	int id;	
-	Paciente paciente;
+	PacienteDTO paciente;
 	Date fecha;
 	String motivoConsulta;
 	Medico medico;
@@ -15,10 +15,10 @@ public class Folio {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public Paciente getPaciente() {
+	public PacienteDTO getPaciente() {
 		return paciente;
 	}
-	public void setPaciente(Paciente paciente) {
+	public void setPaciente(PacienteDTO paciente) {
 		this.paciente = paciente;
 	}
 	public Date getFecha() {

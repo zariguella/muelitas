@@ -1,6 +1,6 @@
 package modelo.dto;
 
-public class Paciente {
+public class PacienteDTO {
 	int id;
 	String nombre;
 	String cedula;
