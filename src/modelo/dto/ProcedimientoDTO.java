@@ -5,6 +5,7 @@ int Id;
 String Nombre; 
 String Codigo; 
 DiagnosticoDTO diagnostico;
+int diagnosticoId;
 public int getId() {
 	return Id;
 }
@@ -28,6 +29,12 @@ public DiagnosticoDTO getDiagnostico() {
 }
 public void setDiagnostico(DiagnosticoDTO diagnostico) {
 	this.diagnostico = diagnostico;
+}
+public int getDiagnosticoId() {
+	return diagnosticoId;
+}
+public void setDiagnosticoId(int diagnosticoId) {
+	this.diagnosticoId = diagnosticoId;
 } 
 
 
