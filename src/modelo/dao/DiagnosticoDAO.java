@@ -23,6 +23,19 @@ public class DiagnosticoDAO {
 		}		
 	}
 	
+	public boolean actualizarDiagnostico(DiagnosticoDTO diagnostico){
+		ConexionPostgres conexion=ConexionPostgres.obtenerInstancia();
+		conexion.conectar();
+		String consulta="update diagnostico set nombrte='"+diagnostico.getNombre()+"',codigo='"+diagnostico.getCodigo()+"' where id='"+diagnostico.getId()+"'";
+		ResultSet resultado=conexion.consultaSQL(consulta);
+		conexion.desconectar();	
+		if(resultado==null){
+			return false;
+		}else{
+			return true;
+		}		
+	}
+	
 	public boolean eliminarDiagnostico(DiagnosticoDTO diagnostico){
 		ConexionPostgres conexion=ConexionPostgres.obtenerInstancia();
 		conexion.conectar();
