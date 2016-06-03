@@ -6,9 +6,11 @@ public class FolioDTO {
 	
 	int id;	
 	PacienteDTO paciente;
+	int pacienteId;
 	Date fecha;
 	String motivoConsulta;
 	MedicoDTO medico;
+	int medicoId;
 	public int getId() {
 		return id;
 	}
@@ -38,6 +40,18 @@ public class FolioDTO {
 	}
 	public void setMedico(MedicoDTO medico) {
 		this.medico = medico;
+	}
+	public int getPacienteId() {
+		return pacienteId;
+	}
+	public void setPacienteId(int pacienteId) {
+		this.pacienteId = pacienteId;
+	}
+	public int getMedicoId() {
+		return medicoId;
+	}
+	public void setMedicoId(int medicoId) {
+		this.medicoId = medicoId;
 	}
 	
 	
