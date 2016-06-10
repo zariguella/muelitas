@@ -6,8 +6,8 @@ public class ConexionPostgres {
 	
 	String driver = "org.postgresql.Driver";
 	String connectString = "jdbc:postgresql://localhost:5432/muelitas";
-	String usuario="";
-	String clave="";	
+	String usuario="postgres";
+	String clave="passwd";	
 	Connection conexion;
 	static ConexionPostgres instancia=null;
 	
