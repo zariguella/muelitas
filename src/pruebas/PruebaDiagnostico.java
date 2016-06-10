@@ -15,7 +15,7 @@ public class PruebaDiagnostico {
 	public void pruebaGuardarDiagnostico() {
 		
 		DiagnosticoDTO diagnostico=new DiagnosticoDTO();
-		diagnostico.setNombre("dolor de muela");
+		diagnostico.setNombre("diagnostico 1");
 		diagnostico.setCodigo("001");
 		assertEquals("probando guardar diagnostico", true, diagnosticoDAO.crearDiagnostico(diagnostico));
 	}
