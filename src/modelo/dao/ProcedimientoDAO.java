@@ -4,10 +4,25 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import modelo.dto.DiagnosticoDTO;
 import modelo.dto.ProcedimientoDTO;
 import util.ConexionPostgres;
 
+
+
 public class ProcedimientoDAO {
+	public boolean actualizarProcedimiento(ProcedimientoDTO procedimiento){
+			ConexionPostgres conexion=ConexionPostgres.obtenerInstancia();
+			conexion.conectar();
+			String consulta="update procedimiento set nombre='"+procedimiento.getNombre()+"',codigo='"+procedimiento.getCodigo()+"' where id='"+procedimiento.getId()+"'";
+			ResultSet resultado=conexion.consultaSQL(consulta);
+			conexion.desconectar();	
+			if(resultado==null){
+				return false;
+			}else{
+				return true;
+			}		
+		}
 	public boolean crearPaciente(ProcedimientoDTO procedimiento){
 		
 		ConexionPostgres conexion=ConexionPostgres.obtenerInstancia();
