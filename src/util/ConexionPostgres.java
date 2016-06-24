@@ -26,7 +26,7 @@ public class ConexionPostgres {
 
 	public boolean desconectar(){
 		try{
-			conexion.close();
+			conexion.close();			
 			return true;
 
 		}catch ( Exception e ){
@@ -39,7 +39,6 @@ public class ConexionPostgres {
 		try{
 			Statement stmt = conexion.createStatement();
 			ResultSet r=stmt.executeQuery(consulta);
-			stmt.close();
 			return r;
 		}catch ( Exception e ){
 			System.out.println(e.getMessage());
